@@ -42,3 +42,136 @@ pet_name = "Furball"
 bio = f"{fname} {lname} ......."
 print(bio)
 
+# fname = input("Type your first name. ")
+
+# lname = input("Type your last name.")
+
+# age = input("Type your age.") #string input
+# age = int(age) #turns strings to ints
+# age = age + 1 #add one to that number
+
+# print(f"{fname} {lname} is {age} years old.")
+
+#conditionals
+x = input("Pick a number, any number!")
+x = float(x)
+
+if x > 0 :
+  print("That's a positive number.")
+elif x == 0:
+  print("That number is zero.")
+# elif x < 0:
+#   print("That's a negative number.")
+else:
+  print("That's a negative number.")
+
+pet = "goldfish"
+if pet == "cat":
+  print("Does your cat sleep all day?")
+elif pet == "dog":
+  print("Does your dog like to fetch?")
+else:
+  print(f"So...what does a {pet} like to do?")
+
+cookie = input("Do you like cookies?")
+# if cookie == "Yes" or cookie == "yes" or cookie == "Yah":
+if cookie != "No":
+  print("Cookies are indeed awesome.")
+
+"""
+
+The weather in the winter is good if you like skiing
+print("The weather is great now")
+
+"""
+
+print("The weather is great now")
+
+def add_nums(a,b):
+  s = a + b
+  return s
+
+print(add_nums(100,200))
+
+def mul_num(x,y,z):
+  return x * y * z
+
+name = "cHarLIE"
+print(name.title())  #.title is a method
+#methods come after object object.method()
+#method modifies the object somehow.
+
+def clean_my_name(first,last):
+  whole_name = first + " " + last #local
+  return whole_name.title()
+
+print(clean_my_name("jAmES","bOnD"))
+
+student1 = clean_my_name("jaMeS","bonD")
+print(student1)
+
+import math 
+print(math.pi)
+
+def Area_of_Circle(r):
+  return math.pi * r ** 2
+
+print(Area_of_Circle(2.5))
+
+#lists ordered and mutable 
+friends = ["Joe","Tom","Peggie"]
+print(friends)
+print(friends[0])
+print(friends[1])
+print(friends[2])
+
+foes = list()
+print(foes)
+
+print(friends[-2])
+print(friends[0:2])
+
+friends.append("Becca")
+print(friends)
+
+friends = friends + ["Byron","Henry"]
+print(friends)
+
+friends.pop(0)
+print(friends)
+
+friends.remove("Peggie")
+print(friends)
+
+friends[0] = "Allie"
+print(friends)
+
+#iterable 
+for person in friends:
+  print(f"{person} is awesome!")
+
+nums = [1,2,7,8,9,13]
+
+for n in nums:
+  if n % 2 == 0:
+    print(f"{n} is an even number.")
+  else:
+    print(f"{n} is an odd number.")
+
+
+import math 
+def area_of_circle(r):
+  return math.pi * r ** 2 
+
+for r in nums:
+  print(area_of_circle(r))
+
+# areas = []
+# for r in nums:
+#   areas.append(area_of_circle(r))
+# print(areas)
+
+#pythonic list comprehension
+areas = [area_of_circle(r) for r in nums]
+#list1 = [function(item) for item in some_list]
+print(areas)
